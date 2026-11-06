@@ -4,6 +4,8 @@ services:
     container_name: polyglot-bot
     restart: unless-stopped
     env_file:
-      - .env
+      - .env.example
+      - path: stack.env
+        required: false
     volumes:
       - ./data:/app/data
