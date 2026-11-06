@@ -1,0 +1,9 @@
+services:
+  polyglot:
+    build: .
+    container_name: polyglot-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
